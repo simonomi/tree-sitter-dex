@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "dex",
+      "camelcase": "Dex",
+      "title": "DEX",
+      "scope": "source.dex",
+      "file-types": [
+        "dex"
+      ],
+      "injection-regex": "^dex$",
+      "class-name": "TreeSitterDex"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "GPL-3.0-only",
+    "description": "Dex grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "alice pellerin",
+        "url": "https://simonomi.dev/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-dex"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

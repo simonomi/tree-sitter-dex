@@ -1,0 +1,37 @@
+==========
+two events
+==========
+// event 1
+unknown <27>: <31>
+
+// event 12199
+set flag <51 8> to <1>
+unknown <27>: <41>
+set flag <100 5> to true
+
+---
+
+(source_file
+	(event
+		(comment)
+		(command
+			(text)
+			(argument)
+			(text)
+			(argument)))
+	(event
+		(comment)
+		(command
+			(text)
+			(argument)
+			(text)
+			(argument))
+		(command
+			(text)
+			(argument)
+			(text)
+			(argument))
+		(command
+			(text)
+			(argument)
+			(text))))

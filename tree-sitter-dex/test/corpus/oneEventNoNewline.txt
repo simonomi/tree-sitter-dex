@@ -1,0 +1,14 @@
+=====================
+one event, no newline
+:skip
+=====================
+unknown <27>: <31>
+---
+
+(source_file
+	(event
+		(command
+			(text)
+			(argument)
+			(text)
+			(argument))))

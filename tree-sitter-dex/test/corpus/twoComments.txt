@@ -1,0 +1,14 @@
+============
+two comments
+============
+// comment one
+
+// comment two
+
+---
+
+(source_file
+	(event
+		(comment))
+	(event
+		(comment)))

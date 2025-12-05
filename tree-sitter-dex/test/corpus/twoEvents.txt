@@ -15,23 +15,30 @@ set flag <100 5> to true
 	(event
 		(comment)
 		(command
-			(text)
-			(argument)
-			(text)
-			(argument)))
+			(commandText)
+			(argument
+				(number))
+			(commandText)
+			(argument
+				(number))))
 	(event
 		(comment)
 		(command
-			(text)
-			(argument)
-			(text)
-			(argument))
+			(commandText)
+			(argument
+				(flag (number) (number)))
+			(commandText)
+			(argument
+				(number)))
 		(command
-			(text)
-			(argument)
-			(text)
-			(argument))
+			(commandText)
+			(argument
+				(number))
+			(commandText)
+			(argument
+				(number)))
 		(command
-			(text)
-			(argument)
-			(text))))
+			(commandText)
+			(argument
+				(flag (number) (number)))
+			(commandText))))

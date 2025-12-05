@@ -72,7 +72,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "text"
+            "name": "commandText"
           },
           {
             "type": "SYMBOL",
@@ -81,13 +81,127 @@
         ]
       }
     },
-    "text": {
+    "commandText": {
       "type": "PATTERN",
       "value": "[^<>\\n]+"
     },
     "argument": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "number"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prefix"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "suffix"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "argumentText"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "flag"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "vector"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ">"
+        }
+      ]
+    },
+    "number": {
       "type": "PATTERN",
-      "value": "<[^<\\n]*>"
+      "value": "-?(0x)?[\\da-fA-F]+(\\.\\d+)?"
+    },
+    "argumentText": {
+      "type": "PATTERN",
+      "value": "[^<>\\n0-9]+"
+    },
+    "prefix": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "argumentText"
+        },
+        {
+          "type": "STRING",
+          "value": " "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "suffix": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": " "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argumentText"
+        }
+      ]
+    },
+    "flag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": " "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "vector": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ", "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
     }
   },
   "extras": [],

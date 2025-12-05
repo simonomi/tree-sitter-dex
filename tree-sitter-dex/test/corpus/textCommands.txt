@@ -1,0 +1,32 @@
+=============
+text commands
+=============
+spawn <Sue> in <Fighter Area> at <-111, 144> facing <90 degrees>
+test hex <0xdeadb33f>
+// these dont actually parse "correctly"
+// not a number: <words_42> or <thing7>
+// prefix: <12 monkeys> suffix <slaughterhouse 5>
+
+---
+
+(source_file
+	(event
+		(command
+			(commandText)
+			(argument
+				(argumentText))
+			(commandText)
+			(argument
+				(argumentText))
+			(commandText)
+			(argument
+				(vector (number) (number)))
+			(commandText)
+			(argument
+				(suffix (number) (argumentText))))
+		(command
+			(commandText)
+			(argument (number)))
+		(comment)
+		(comment)
+		(comment)))

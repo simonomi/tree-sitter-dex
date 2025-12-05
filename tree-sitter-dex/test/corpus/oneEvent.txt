@@ -8,7 +8,9 @@ unknown <27>: <31>
 (source_file
 	(event
 		(command
-			(text)
-			(argument)
-			(text)
-			(argument))))
+			(commandText)
+			(argument
+				(number))
+			(commandText)
+			(argument
+				(number)))))
